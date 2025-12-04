@@ -6,6 +6,9 @@ import Icon from '@react-native-vector-icons/ionicons';
 import HomeScreen from './src/screens/HomeScreen';
 import TaskScreen from './src/screens/TaskScreen';
 import { TaskProvider } from './src/components/context/task-context';
+import DashboardScreen from './src/screens/Dashboard';
+import PrivacySecurityScreen from './src/screens/PrivacySecurity';
+import HelpSupportScreen from './src/screens/HelpSupport';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +33,8 @@ export default function App() {
               else if (route.name === 'Tasks') iconName = 'checkbox-outline';
               else if (route.name === 'Dashboard') iconName = 'stats-chart-outline';
               else if (route.name === 'Profile') iconName = 'person-circle-outline';
+              else if (route.name === 'Help') iconName = 'circle-outline';
+              else if (route.name === 'Privacy') iconName = 'circle-outline';
               return <Icon name={iconName} size={size} color={color} />;
             },
           })}
@@ -37,6 +42,9 @@ export default function App() {
           <Tab.Screen name="Home" component={HomeScreen} />
           {/*<Tab.Screen name="Calendar" component={} />*/}
           <Tab.Screen name="Tasks" component={TaskScreen} />
+          <Tab.Screen name="Dashboard" component={DashboardScreen} />
+          <Tab.Screen name="Help" component={HelpSupportScreen} />
+          <Tab.Screen name="Privacy" component={PrivacySecurityScreen} />
           {/*<Tab.Screen name="Dashboard" component={} />*/}
           {/*<Tab.Screen name="Profile" component={} />*/}
         </Tab.Navigator>
