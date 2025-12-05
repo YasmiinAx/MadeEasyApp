@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "allowJs": true,                // Allow JS/JSX files
+    "jsx": "react",                 // Use React JSX
+    "noEmit": true,                 // Don't output compiled files
+    "strict": true,                 // Enable strict checks
+    "moduleResolution": "node",     // Resolve modules like Node
+    "target": "ESNext",             // Modern JS target
+    "skipLibCheck": true,           // Skip checking types in node_modules
+    "baseUrl": ".",                 // Base path for imports
+    "paths": {
+      "*": ["src/*"]                // Map imports from src/
+    }
+  },
+  "include": [
+    "App.jsx",
+    "index.js",
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "Pods"
+  ]
+}

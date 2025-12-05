@@ -1,0 +1,23 @@
+import React from "react";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import CalendarScreen from "./CalendarScreen";
+import ScheduleTaskScreen from "./ScheduleTaskScreen";
+
+const Stack = createNativeStackNavigator();
+
+export default function CalendarStackScreen() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="CalendarMain"
+        component={CalendarScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="ScheduleTask"
+        component={ScheduleTaskScreen}
+        options={{ title: "Schedule Task" }}
+      />
+    </Stack.Navigator>
+  );
+}
