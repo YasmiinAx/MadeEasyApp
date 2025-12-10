@@ -9,6 +9,8 @@ import { TaskProvider } from './src/components/context/task-context';
 import DashboardScreen from './src/screens/Dashboard';
 import PrivacySecurityScreen from './src/screens/PrivacySecurity';
 import HelpSupportScreen from './src/screens/HelpSupport';
+import CalendarStackScreen from './src/screens/CalendarStackScreen';
+import ProfileStackScreen from './src/screens/ProfileStackScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,13 +42,12 @@ export default function App() {
           })}
         >
           <Tab.Screen name="Home" component={HomeScreen} />
-          {/*<Tab.Screen name="Calendar" component={} />*/}
+          <Tab.Screen name="Calendar" component={CalendarStackScreen} />
           <Tab.Screen name="Tasks" component={TaskScreen} />
           <Tab.Screen name="Dashboard" component={DashboardScreen} />
           <Tab.Screen name="Help" component={HelpSupportScreen} />
           <Tab.Screen name="Privacy" component={PrivacySecurityScreen} />
-          {/*<Tab.Screen name="Dashboard" component={} />*/}
-          {/*<Tab.Screen name="Profile" component={} />*/}
+          <Tab.Screen name="Profile" component={ProfileStackScreen} />
         </Tab.Navigator>
       </NavigationContainer>
     </TaskProvider>

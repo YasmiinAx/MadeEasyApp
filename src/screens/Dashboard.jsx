@@ -16,6 +16,7 @@ const calculateWeeklyChange = (currentWeekTotal, lastWeekTotal) => {
 // hard Coded at the moment
 const currentWeekTasks = 63;
 const lastWeekTasks = 55; 
+
 // used for changing display depending if it is increase or decrease from last week
 const weeklyChange = calculateWeeklyChange(currentWeekTasks, lastWeekTasks);
 const isIncrease = weeklyChange >= 0;
@@ -101,8 +102,9 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     headerText: {
+        paddingTop: 30,
         color: '#FFFFFF',
-        fontSize: 30,
+        fontSize: 25,
     },
     subheaderText: {
         color: '#A894A3',
@@ -137,31 +139,15 @@ const styles = StyleSheet.create({
     cardHeader: {
         color: '#FFFFFF',
         fontSize: 22,
-        marginBottom: 15,
+        paddingBottom: 5,
     },
     dashImagePlaceholder: {
-        width: '100%',
-        height: '100%',
-        backgroundColor: '#271925',
-        borderRadius: 12,
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderWidth: 1,
-        borderColor: '#3D2938',
-        borderStyle: 'dashed',
+        alignItems: 'center',        
     },
     dashChartPlaceholder: {
-        width: '100%',
         height: 200,
-        backgroundColor: '#271925',
-        borderRadius: 12,
-        justifyContent: 'center',
         alignItems: 'center',
-        borderWidth: 1,
-        borderColor: '#3D2938',
-        borderStyle: 'dashed',
     },
-    //used by completion and this week
     numberDisplay: {
         color: '#A894A3',
         fontSize: 14,
@@ -171,13 +157,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        paddingVertical: 12,
-        borderBottomWidth: 1,
-        borderBottomColor: '#3D2938',
+        paddingVertical: 5,
     },
     summaryLabel: {
         color: '#A894A3',
-        fontSize: 16,
+        fontSize: 18,
     },
     summaryValue: {
         color: '#FFFFFF',
