@@ -106,22 +106,103 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#221520', padding: 20 },
-    headerText: { color: '#FFFFFF', fontSize: 30 },
-    subheaderText: { color: '#A894A3', fontSize: 18, marginBottom: 15 },
-    card: { backgroundColor: '#2D1F2B', padding: 20, borderRadius: 16, borderWidth: 1, borderColor: '#3D2938', marginBottom: 15 },
-    cardRow: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 10, marginBottom: 25 },
-    smallCard: { backgroundColor: '#2D1F2B', borderRadius: 16, borderWidth: 1, borderColor: '#3D2938', width: '31%', height: 140, alignItems: 'center', justifyContent: 'center' },
-    cardTitle: { color: '#A894A3', fontSize: 16 },
-    cardHeader: { color: '#FFFFFF', fontSize: 22, paddingBottom: 5 },
-    cardValue: { color: '#E891D6', fontSize: 22 },
-    cardFlex: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-    progressBarBackground: { height: 8, backgroundColor: '#E891D680', borderRadius: 5, marginTop: 18, overflow: 'hidden' },
-    progressBarFill: { height: 8, backgroundColor: '#E891D6', borderRadius: 5 },
-    inBox: { backgroundColor: '#271925', padding: 18, marginVertical: 6, borderRadius: 14 },
-    inBoxText: { fontSize: 17, color: '#FFFFFF', marginLeft: 0 },
-    taskTime: { fontSize: 14, color: '#A894A3', marginTop: 2, marginLeft: 0 },
-    completedTask: { textDecorationLine: 'line-through', color: '#A894A3' },
-    taskRow: { flexDirection: 'row', alignItems: 'center' },
-    priorityDot: { width: 12, height: 12, borderRadius: 6, marginRight: 10 },
+    container: { 
+        flex: 1, 
+        backgroundColor: '#221520', 
+        padding: 20 
+    },
+    headerText: { 
+        color: '#FFFFFF', 
+        fontSize: 30 
+    },
+    subheaderText: { 
+        color: '#A894A3', 
+        fontSize: 18, 
+        marginBottom: 15 
+    },
+    card: { 
+        backgroundColor: '#2D1F2B', 
+        padding: 20, 
+        borderRadius: 16, 
+        borderWidth: 1, 
+        borderColor: '#3D2938', 
+        marginBottom: 15 
+    },
+    cardRow: { 
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        marginTop: 10, 
+        marginBottom: 25 
+    },
+    smallCard: { 
+        backgroundColor: '#2D1F2B', 
+        borderRadius: 16, 
+        borderWidth: 1, 
+        borderColor: '#3D2938', 
+        width: '31%', 
+        height: 140, 
+        alignItems: 'center', 
+        justifyContent: 'center' 
+    },
+    cardTitle: { 
+        color: '#A894A3', 
+        fontSize: 16 
+    },
+    cardHeader: { 
+        color: '#FFFFFF', 
+        fontSize: 22, 
+        paddingBottom: 5 
+    },
+    cardValue: { 
+        color: '#E891D6', 
+        fontSize: 22 
+    },
+    cardFlex: { 
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'center' 
+    },
+    progressBarBackground: { 
+        height: 8, 
+        backgroundColor: '#E891D680', 
+        borderRadius: 5, 
+        marginTop: 18, 
+        overflow: 'hidden' 
+    },
+    progressBarFill: { 
+        height: 8, 
+        backgroundColor: '#E891D6', 
+        borderRadius: 5 
+    },
+    inBox: { 
+        backgroundColor: '#271925', 
+        padding: 18, 
+        marginVertical: 6, 
+        borderRadius: 14 
+    },
+    inBoxText: { 
+        fontSize: 17, 
+        color: '#FFFFFF',
+         marginLeft: 0 
+        },
+    taskTime: { 
+        fontSize: 14, 
+        color: '#A894A3', 
+        marginTop: 2, 
+        marginLeft: 0 
+    },
+    completedTask: { 
+        textDecorationLine: 'line-through', 
+        color: '#A894A3' 
+    },
+    taskRow: { 
+        flexDirection: 'row', 
+        alignItems: 'center' 
+    },
+    priorityDot: { 
+        width: 12, 
+        height: 12, 
+        borderRadius: 6, 
+        marginRight: 10 
+    },
 });

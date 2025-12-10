@@ -39,13 +39,31 @@ export default function EditProfileScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#1A121C", paddingHorizontal: 20 },
-  saveBtnTop: { marginTop: 20, backgroundColor: "#E891D6", paddingVertical: 10, paddingHorizontal: 28, borderRadius: 12 },
-  saveTextTop: { color: "#FFFFFF", fontSize: 25, textAlign: 'center' },
-
-  card: { backgroundColor: "#2D1F2B", padding: 20, borderRadius: 16, borderWidth: 1, borderColor: "#3D2938", marginBottom: 20 },
-
-
+  container: { 
+    flex: 1, 
+    backgroundColor: "#1A121C", 
+    paddingHorizontal: 20 
+  },
+  saveBtnTop: { 
+    marginTop: 20, 
+    backgroundColor: "#E891D6", 
+    paddingVertical: 10, 
+    paddingHorizontal: 28, 
+    borderRadius: 12 
+  },
+  saveTextTop: { 
+    color: "#FFFFFF", 
+    fontSize: 25, 
+    textAlign: 'center' 
+  },
+  card: { 
+    backgroundColor: "#2D1F2B", 
+    padding: 20, 
+    borderRadius: 16, 
+    borderWidth: 1, 
+    borderColor: "#3D2938", 
+    marginBottom: 20 
+  },
   profileCircle: {
     width: 130,
     height: 130,
@@ -56,8 +74,21 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginVertical: 50,
   },
-  profileInitial: { color: "#221520", fontSize: 40 },
-
-  label: { fontSize: 18, color: "#FFFFFF", marginBottom: 5 },
-  input: { borderRadius: 10, padding: 15, fontSize: 16, marginBottom: 20, color: "#FFFFFF", backgroundColor: "#271925" },
+  profileInitial: { 
+    color: "#221520", 
+    fontSize: 40 
+  },
+  label: { 
+    fontSize: 18, 
+    color: "#FFFFFF", 
+    marginBottom: 5 
+  },
+  input: { 
+    borderRadius: 10, 
+    padding: 15, 
+    fontSize: 16, 
+    marginBottom: 20, 
+    color: "#FFFFFF", 
+    backgroundColor: "#271925" 
+  },
 });

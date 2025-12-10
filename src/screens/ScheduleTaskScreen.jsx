@@ -125,11 +125,42 @@ export default function ScheduleTaskScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: "#1A121C", padding: 20 },
-    calendar: { borderRadius: 16, borderWidth: 1, borderColor: "#3D2938", marginBottom: 25, overflow: "hidden" },
-    label: { color: "#ffffff", fontSize: 16, marginBottom: 8 },
-    dropdown: { backgroundColor: "#2D1F2B", borderRadius: 14, marginBottom: 20, paddingHorizontal: 6 },
-    picker: { color: "#A894A3" },
-    button: { backgroundColor: "#E891D6", paddingVertical: 10, borderRadius: 10, alignItems: "center", marginTop: 5 },
-    buttonText: { color: "#ffffff", fontWeight: "bold", fontSize: 16 },
+    container: { 
+      flex: 1, 
+      backgroundColor: "#1A121C", 
+      padding: 20 
+    },
+    calendar: { 
+      borderRadius: 16, 
+      borderWidth: 1, 
+      borderColor: "#3D2938", 
+      marginBottom: 25, 
+      overflow: "hidden" 
+    },
+    label: { 
+      color: "#ffffff", 
+      fontSize: 16, 
+      marginBottom: 8 
+    },
+    dropdown: { 
+      backgroundColor: "#2D1F2B", 
+      borderRadius: 14, 
+      marginBottom: 20, 
+      paddingHorizontal: 6 
+    },
+    picker: { 
+      color: "#A894A3" 
+    },
+    button: { 
+      backgroundColor: "#E891D6", 
+      paddingVertical: 10, 
+      borderRadius: 10, 
+      alignItems: "center", 
+      marginTop: 5 
+    },
+    buttonText: { 
+      color: "#ffffff", 
+      fontWeight: "bold", 
+      fontSize: 16 
+    },
 });

@@ -131,29 +131,135 @@ export default function ProfileScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#221520", paddingHorizontal: 20, paddingTop: 20 },
-  header: { paddingTop: 30, color: "#FFFFFF", fontSize: 25, paddingBottom: 10 },
-  profileCard: { backgroundColor: "#2D1F2B", padding: 20, borderRadius: 16, borderWidth: 1, borderColor: "#3D2938", marginBottom: 20 },
-  profileRow: { flexDirection: "row", alignItems: "center" },
-  profileCircle: { width: 80, height: 80, borderRadius: 40, backgroundColor: "#EADDFF", justifyContent: "center", alignItems: "center", marginRight: 15 },
-  profileInitial: { color: "#221520", fontSize: 16 },
-  profileName: { color: "#FFFFFF", fontSize: 20, fontWeight: "600" },
-  profileEmail: { color: "#A894A3", fontSize: 14, marginTop: 2 },
-  editProfileBtn: { flexDirection: "row", marginTop: 8, paddingHorizontal: 18, paddingVertical: 4, backgroundColor: "#221520", alignSelf: "flex-start", borderRadius: 8, borderWidth: 1, borderColor: "#3D2938", alignItems: "center" },
-  editProfileText: { color: "#FFFFFF", fontSize: 13 },
-
-  sectionTitle: { color: "#FFFFFF", fontSize: 20, marginBottom: 10, marginTop: 10 },
-
-  achievementRow: { flexDirection: "row", justifyContent: "space-between", marginBottom: 20 },
-  achievementCard: { width: "48%", height: 150, backgroundColor: "#2D1F2B", padding: 20, borderRadius: 16, borderWidth: 1, borderColor: "#3D2938", justifyContent: "center", alignItems: "center" },
-  achievementIcon: { width: 45, height: 45, marginBottom: 10 },
-  achievementValue: { color: "#FFFFFF", fontSize: 22, textAlign: "center" },
-
-  settingsCard: { backgroundColor: "#2D1F2B", padding: 10, borderRadius: 16, borderWidth: 1, borderColor: "#3D2938" },
-  settingsRow: { flexDirection: "row", alignItems: "center", paddingVertical: 8, borderBottomColor: "#3D2938", borderBottomWidth: 1 },
-  settingsRow2: { flexDirection: "row", alignItems: "center", paddingVertical: 6 },
-  settingsIcon: { width: 30, height: 30, marginRight: 12 },
-  settingsTitle: { color: "#FFFFFF", fontSize: 18 },
-  settingsSubtitle: { color: "#A894A3", fontSize: 15 },
-  chevron: { color: "#A894A3", fontSize: 35, marginRight: 10 },
+  container: { 
+    flex: 1, 
+    backgroundColor: "#221520", 
+    paddingHorizontal: 20, 
+    paddingTop: 20 
+  },
+  header: { 
+    paddingTop: 30, 
+    color: "#FFFFFF", 
+    fontSize: 25, 
+    paddingBottom: 10 
+  },
+  profileCard: { 
+    backgroundColor: "#2D1F2B", 
+    padding: 20, 
+    borderRadius: 16, 
+    borderWidth: 1, 
+    borderColor: "#3D2938", 
+    marginBottom: 20 
+  },
+  profileRow: { 
+    flexDirection: "row", 
+    alignItems: "center" 
+  },
+  profileCircle: { 
+    width: 80, 
+    height: 80, 
+    borderRadius: 40, 
+    backgroundColor: "#EADDFF", 
+    justifyContent: "center", 
+    alignItems: "center", 
+    marginRight: 15 
+  },
+  profileInitial: { 
+    color: "#221520", 
+    fontSize: 16 
+  },
+  profileName: { 
+    color: "#FFFFFF", 
+    fontSize: 20, 
+    fontWeight: "600" 
+  },
+  profileEmail: { 
+    color: "#A894A3", 
+    fontSize: 14, 
+    marginTop: 2 
+  },
+  editProfileBtn: { 
+    flexDirection: "row", 
+    marginTop: 8, 
+    paddingHorizontal: 18, 
+    paddingVertical: 4, 
+    backgroundColor: "#221520", 
+    alignSelf: "flex-start", 
+    borderRadius: 8, 
+    borderWidth: 1, 
+    borderColor: "#3D2938", 
+    alignItems: "center" },
+  editProfileText: { 
+    color: "#FFFFFF", 
+    fontSize: 13 
+  },
+  sectionTitle: { 
+    color: "#FFFFFF", 
+    fontSize: 20, 
+    marginBottom: 10, 
+    marginTop: 10 
+  },
+  achievementRow: { 
+    flexDirection: "row", 
+    justifyContent: "space-between", 
+    marginBottom: 20 
+  },
+  achievementCard: { 
+    width: "48%", 
+    height: 150, 
+    backgroundColor: "#2D1F2B", 
+    padding: 20, 
+    borderRadius: 16, 
+    borderWidth: 1, 
+    borderColor: "#3D2938", 
+    justifyContent: "center", 
+    alignItems: "center" 
+  },
+  achievementIcon: { 
+    width: 45, 
+    height: 45, 
+    marginBottom: 10 
+  },
+  achievementValue: { 
+    color: "#FFFFFF", 
+    fontSize: 22, 
+    textAlign: "center" 
+  },
+  settingsCard: { 
+    backgroundColor: "#2D1F2B", 
+    padding: 10, 
+    borderRadius: 16, 
+    borderWidth: 1, 
+    borderColor: "#3D2938" 
+  },
+  settingsRow: { 
+    flexDirection: "row", 
+    alignItems: "center", 
+    paddingVertical: 8, 
+    borderBottomColor: "#3D2938", 
+    borderBottomWidth: 1 
+  },
+  settingsRow2: { 
+    flexDirection: "row", 
+    alignItems: "center", 
+    paddingVertical: 6 
+  },
+  settingsIcon: { 
+    width: 30, 
+    height: 30, 
+    marginRight: 12 
+  },
+  settingsTitle: { 
+    color: "#FFFFFF", 
+    fontSize: 18 
+  },
+  settingsSubtitle: { 
+    color: "#A894A3", 
+    fontSize: 15 
+  },
+  chevron: { 
+    color: "#A894A3", 
+    fontSize: 35, 
+    marginRight: 10 
+  },
 });
