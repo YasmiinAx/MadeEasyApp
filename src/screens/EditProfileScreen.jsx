@@ -1,107 +1,63 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-  ScrollView,
-} from "react-native";
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import { useProfile } from "../components/context/profile-context";
 
 export default function EditProfileScreen({ navigation }) {
-  const [name, setName] = useState("Mishti");
-  const [email, setEmail] = useState("mishti@example.com");
-  const [bio, setBio] = useState("Student • Software Developer • Calgary");
+  const { profile, updateProfile } = useProfile();
+  const [name, setName] = useState(profile.name);
+  const [email, setEmail] = useState(profile.email);
+  const [phone, setPhone] = useState(profile.phone);
+
+  const handleSave = () => {
+    updateProfile({ name, email, phone });
+    navigation.goBack();
+  };
 
   return (
     <ScrollView style={styles.container}>
-      {/* Header */}
-      <Text style={styles.header}>Edit Profile</Text>
 
-      {/* Profile Image */}
-      <Image
-        source={require("../assets/images/profile.png")} 
-        style={styles.profileImage}
-      />
+      {/* Profile Initial */}
+      <View style={styles.profileCircle}>
+        <Text style={styles.profileInitial}>{name ? name.charAt(0) : "?"}</Text>
+      </View>
 
-      {/* Form */}
-      <Text style={styles.label}>Name</Text>
-      <TextInput
-        value={name}
-        onChangeText={setName}
-        style={styles.input}
-      />
+      <View style={styles.card}> 
+        <Text style={styles.label}>Full Name</Text>
+        <TextInput value={name} onChangeText={setName} style={styles.input} />
 
-      <Text style={styles.label}>Email</Text>
-      <TextInput
-        value={email}
-        onChangeText={setEmail}
-        style={styles.input}
-      />
+        <Text style={styles.label}>Email</Text>
+        <TextInput value={email} onChangeText={setEmail} style={styles.input} />
 
-      <Text style={styles.label}>Bio</Text>
-      <TextInput
-        value={bio}
-        onChangeText={setBio}
-        style={[styles.input, { height: 100 }]}
-        multiline
-      />
-
-      {/* Save Button */}
-      <TouchableOpacity
-        style={styles.saveBtn}
-        onPress={() => navigation.goBack()}
-      >
-        <Text style={styles.saveText}>Save Changes</Text>
-      </TouchableOpacity>
+        <Text style={styles.label}>Phone</Text>
+        <TextInput value={phone} onChangeText={setPhone} style={styles.input} keyboardType="phone-pad" />
+      </View>
+        <TouchableOpacity style={styles.saveBtnTop} onPress={handleSave}>
+          <Text style={styles.saveTextTop}>Save</Text>
+        </TouchableOpacity>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFFFFF",
-    paddingHorizontal: 20,
-    paddingTop: 50,
-  },
-  header: {
-    fontSize: 32,
-    fontWeight: "700",
-    marginBottom: 20,
-  },
-  profileImage: {
+  container: { flex: 1, backgroundColor: "#1A121C", paddingHorizontal: 20 },
+  saveBtnTop: { marginTop: 20, backgroundColor: "#E891D6", paddingVertical: 10, paddingHorizontal: 28, borderRadius: 12 },
+  saveTextTop: { color: "#FFFFFF", fontSize: 25, textAlign: 'center' },
+
+  card: { backgroundColor: "#2D1F2B", padding: 20, borderRadius: 16, borderWidth: 1, borderColor: "#3D2938", marginBottom: 20 },
+
+
+  profileCircle: {
     width: 130,
     height: 130,
     borderRadius: 65,
+    backgroundColor: "#EADDFF",
+    justifyContent: "center",
+    alignItems: "center",
     alignSelf: "center",
-    marginBottom: 25,
+    marginVertical: 50,
   },
-  label: {
-    fontSize: 18,
-    fontWeight: "600",
-    marginBottom: 8,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: "#CFCFCF",
-    borderRadius: 10,
-    padding: 12,
-    fontSize: 16,
-    marginBottom: 20,
-  },
-  saveBtn: {
-    backgroundColor: "#2E6FF2",
-    paddingVertical: 15,
-    borderRadius: 12,
-    marginTop: 10,
-    marginBottom: 40,
-  },
-  saveText: {
-    color: "#FFF",
-    textAlign: "center",
-    fontSize: 20,
-    fontWeight: "700",
-  },
+  profileInitial: { color: "#221520", fontSize: 40 },
+
+  label: { fontSize: 18, color: "#FFFFFF", marginBottom: 5 },
+  input: { borderRadius: 10, padding: 15, fontSize: 16, marginBottom: 20, color: "#FFFFFF", backgroundColor: "#271925" },
 });

@@ -7,16 +7,16 @@ import HomeScreen from './src/screens/HomeScreen';
 import TaskScreen from './src/screens/TaskScreen';
 import { TaskProvider } from './src/components/context/task-context';
 import DashboardScreen from './src/screens/Dashboard';
-import PrivacySecurityScreen from './src/screens/PrivacySecurity';
-import HelpSupportScreen from './src/screens/HelpSupport';
 import CalendarStackScreen from './src/screens/CalendarStackScreen';
 import ProfileStackScreen from './src/screens/ProfileStackScreen';
+import { ProfileProvider } from './src/components/context/profile-context';
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <TaskProvider>
+      <ProfileProvider>
       <NavigationContainer>
         <Tab.Navigator
           screenOptions={({ route }) => ({
@@ -45,11 +45,10 @@ export default function App() {
           <Tab.Screen name="Calendar" component={CalendarStackScreen} />
           <Tab.Screen name="Tasks" component={TaskScreen} />
           <Tab.Screen name="Dashboard" component={DashboardScreen} />
-          <Tab.Screen name="Help" component={HelpSupportScreen} />
-          <Tab.Screen name="Privacy" component={PrivacySecurityScreen} />
           <Tab.Screen name="Profile" component={ProfileStackScreen} />
         </Tab.Navigator>
       </NavigationContainer>
+      </ProfileProvider>
     </TaskProvider>
   );
 }

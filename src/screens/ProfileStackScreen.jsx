@@ -2,6 +2,8 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ProfileScreen from "../screens/ProfileScreen";
 import EditProfileScreen from "../screens/EditProfileScreen";
+import HelpSupportScreen from "./HelpSupport";
+import PrivacySecurityScreen from "./PrivacySecurity";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,8 +23,34 @@ export default function ProfileStackScreen() {
           headerStyle: {
             backgroundColor: "#1A121C",
           },
-          headerTintColor: "#fff",
+          headerTintColor: "#ffffffff",
           headerTitle: "Edit Profile",
+        }}
+      />
+
+      <Stack.Screen
+        name="Privacy"
+        component={PrivacySecurityScreen}
+        options={{
+            headerStyle: {
+            backgroundColor: "#1A121C",
+            },
+            headerTintColor: "#ffffffff",
+            headerTitle: "Privacy & Security",
+            headerBackTitle: "Back",
+        }}
+      />
+
+      <Stack.Screen
+        name="Help"
+        component={HelpSupportScreen}
+        options={{
+            headerStyle: {
+            backgroundColor: "#1A121C",
+            },
+            headerTintColor: "#ffffffff",
+            headerTitle: "Help & Support",
+            headerBackTitle: "Back",
         }}
       />
     </Stack.Navigator>

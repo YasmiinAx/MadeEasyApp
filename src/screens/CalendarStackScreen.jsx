@@ -20,7 +20,7 @@ export default function CalendarStackScreen() {
             headerStyle: {
             backgroundColor: "#1A121C", 
             },
-            headerTintColor: "#fff", 
+            headerTintColor: "#ffffffff", 
             headerTitle: "Schedule Task",
         }}
     />
