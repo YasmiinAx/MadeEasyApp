@@ -41,7 +41,7 @@ export default function EditProfileScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: "#1A121C", 
+    backgroundColor: "#221520", 
     paddingHorizontal: 20 
   },
   saveBtnTop: { 

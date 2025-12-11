@@ -21,7 +21,7 @@ export default function ProfileStackScreen() {
         component={EditProfileScreen}
         options={{
           headerStyle: {
-            backgroundColor: "#1A121C",
+            backgroundColor: "#221520",
           },
           headerTintColor: "#ffffffff",
           headerTitle: "Edit Profile",
@@ -33,7 +33,7 @@ export default function ProfileStackScreen() {
         component={PrivacySecurityScreen}
         options={{
             headerStyle: {
-            backgroundColor: "#1A121C",
+            backgroundColor: "#221520",
             },
             headerTintColor: "#ffffffff",
             headerTitle: "Privacy & Security",
@@ -46,7 +46,7 @@ export default function ProfileStackScreen() {
         component={HelpSupportScreen}
         options={{
             headerStyle: {
-            backgroundColor: "#1A121C",
+            backgroundColor: "#221520",
             },
             headerTintColor: "#ffffffff",
             headerTitle: "Help & Support",

@@ -1,28 +1,33 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, Image } from 'react-native';
 
 export default function HelpSupportScreen() {
     const [email, setEmail] = useState('yasmina@example.com');
     const [message, setMessage] = useState('');
 
     return (
-        <ScrollView style={[styles.container, { paddingTop: 60 }]} contentContainerStyle={{ paddingBottom: 80 }}>
-            {/* Header */}
-            <Text style={styles.headerText}>Help & Support</Text>
-
+        <ScrollView style={[styles.container]} contentContainerStyle={{ paddingBottom: 80 }}>
+            
             {/* Help */}
             <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Help</Text>
 
                 <TouchableOpacity style={styles.helpCard}>
                     <View style={styles.helpRow}>
+
+                        {/* Replaced icon with image */}
                         <View style={styles.iconContainer}>
-                            <Text style={styles.icon}>📖</Text>
+                            <Image
+                                source={require("../assets/images/book.png")}
+                                style={{ width: 24, height: 24 }}
+                            />
                         </View>
+
                         <View style={styles.helpContent}>
                             <Text style={styles.helpTitle}>Getting Started</Text>
                             <Text style={styles.helpDescription}>Learn the basics of using the app</Text>
                         </View>
+
                         <Text style={styles.chevron}>›</Text>
                     </View>
                 </TouchableOpacity>
@@ -33,7 +38,7 @@ export default function HelpSupportScreen() {
                 <Text style={styles.sectionTitle}>Contact Support</Text>
 
                 <View style={styles.card}>
-                    {/* Email Input (could grab from Profile but will need that section done so this is just forr now) */}
+                    {/* Email */}
                     <View style={styles.inputGroup}>
                         <Text style={styles.inputLabel}>Email</Text>
                         <TextInput
@@ -46,7 +51,7 @@ export default function HelpSupportScreen() {
                         />
                     </View>
 
-                    {/* insert text here stuff for contacting support */}
+                    {/* Message */}
                     <View style={styles.inputGroup}>
                         <Text style={styles.inputLabel}>Message</Text>
                         <TextInput
@@ -61,9 +66,12 @@ export default function HelpSupportScreen() {
                         />
                     </View>
 
-                    {/* Button */}
+                    {/* Send Button (icon changed to image) */}
                     <TouchableOpacity style={styles.sendButton}>
-                        <Text style={styles.sendIcon}>✉️</Text>
+                        <Image
+                            source={require("../assets/images/send.png")}
+                            style={{ width: 20, height: 20, marginRight: 8 }}
+                        />
                         <Text style={styles.sendButtonText}>Send Message</Text>
                     </TouchableOpacity>
                 </View>
@@ -74,25 +82,21 @@ export default function HelpSupportScreen() {
                 <Text style={styles.sectionTitle}>App Information</Text>
 
                 <View style={styles.card}>
-                    {/* Version */}
-                    <View style={styles.infoRow}>
+                    <View style={styles.infoRowNoBorder}>
                         <Text style={styles.infoLabel}>Version</Text>
                         <Text style={styles.infoValue}>1.0.0</Text>
                     </View>
 
-                    {/* Created */}
-                    <View style={styles.infoRow}>
+                    <View style={styles.infoRowNoBorder}>
                         <Text style={styles.infoLabel}>Created On</Text>
                         <Text style={styles.infoValue}>2025.10.15</Text>
                     </View>
 
-                    {/* Update Dat4e */}
-                    <View style={styles.infoRow}>
+                    <View style={styles.infoRowNoBorder}>
                         <Text style={styles.infoLabel}>Last Updated</Text>
                         <Text style={styles.infoValue}>2025.10.17</Text>
                     </View>
 
-                    {/* Check Updates demo */}
                     <TouchableOpacity style={styles.updateButton}>
                         <Text style={styles.updateButtonText}>Check All Updates</Text>
                     </TouchableOpacity>
@@ -108,17 +112,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#221520',
         padding: 20,
     },
-    headerText: {
-        color: '#FFFFFF',
-        fontSize: 30,
-        marginBottom: 25,
-    },
     section: {
         marginBottom: 25,
     },
     sectionTitle: {
         color: '#FFFFFF',
-        fontSize: 18,
+        fontSize: 20,
         marginBottom: 12,
     },
     helpCard: {
@@ -135,30 +134,24 @@ const styles = StyleSheet.create({
     iconContainer: {
         width: 40,
         height: 40,
-        backgroundColor: '#271925',
-        borderRadius: 20,
         justifyContent: 'center',
         alignItems: 'center',
-        marginRight: 12,
-    },
-    icon: {
-        fontSize: 20,
+        marginRight: 10,
     },
     helpContent: {
         flex: 1,
     },
     helpTitle: {
         color: '#FFFFFF',
-        fontSize: 16,
-        marginBottom: 4,
+        fontSize: 18,
     },
     helpDescription: {
         color: '#A894A3',
-        fontSize: 14,
+        fontSize: 16,
     },
     chevron: {
         color: '#A894A3',
-        fontSize: 28,
+        fontSize: 35,
     },
     card: {
         backgroundColor: '#2D1F2B',
@@ -190,39 +183,34 @@ const styles = StyleSheet.create({
     },
     sendButton: {
         backgroundColor: '#E891D6',
-        padding: 16,
-        borderRadius: 12,
+        padding: 12,
+        borderRadius: 10,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 10,
     },
-    sendIcon: {
-        fontSize: 18,
-        marginRight: 8,
-    },
     sendButtonText: {
         color: '#FFFFFF',
-        fontSize: 16,
-        fontWeight: '600',
+        fontSize: 18,
     },
-    infoRow: {
+    infoRowNoBorder: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingVertical: 12,
-        borderBottomWidth: 1,
-        borderBottomColor: '#3D2938',
+        paddingVertical: 6,
     },
     infoLabel: {
         color: '#A894A3',
-        fontSize: 16,
+        fontSize: 17,
     },
     infoValue: {
         color: '#FFFFFF',
-        fontSize: 16,
+        fontSize: 17,
     },
     updateButton: {
-        backgroundColor: '#271925',
+        backgroundColor: '#221520',
+        borderWidth: 1,
+        borderColor: "#3D2938",
         padding: 14,
         borderRadius: 12,
         alignItems: 'center',

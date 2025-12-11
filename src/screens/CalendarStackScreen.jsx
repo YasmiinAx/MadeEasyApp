@@ -18,7 +18,7 @@ export default function CalendarStackScreen() {
         component={ScheduleTaskScreen}
         options={{
             headerStyle: {
-            backgroundColor: "#1A121C", 
+            backgroundColor: "#221520", 
             },
             headerTintColor: "#ffffffff", 
             headerTitle: "Schedule Task",

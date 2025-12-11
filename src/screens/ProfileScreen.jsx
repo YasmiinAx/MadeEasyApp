@@ -170,12 +170,11 @@ const styles = StyleSheet.create({
   },
   profileName: { 
     color: "#FFFFFF", 
-    fontSize: 20, 
-    fontWeight: "600" 
+    fontSize: 21, 
   },
   profileEmail: { 
     color: "#A894A3", 
-    fontSize: 14, 
+    fontSize: 15, 
     marginTop: 2 
   },
   editProfileBtn: { 

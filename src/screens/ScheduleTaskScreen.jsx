@@ -127,7 +127,7 @@ export default function ScheduleTaskScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: { 
       flex: 1, 
-      backgroundColor: "#1A121C", 
+      backgroundColor: "#221520", 
       padding: 20 
     },
     calendar: { 
