@@ -9,7 +9,7 @@ export default function HomeScreen() {
     const totalTasks = taskList.length;
     const completedTasks = taskList.filter(t => t.completed).length;
     const remainingTasks = taskList.filter(t => !t.completed).length;
-    const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Edmonton' }); // get todays tasks
 
     // Today's tasks from calendar, sorted by time
     const todaysTasks = calendarTasks

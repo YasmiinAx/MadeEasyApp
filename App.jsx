@@ -11,6 +11,7 @@ import CalendarStackScreen from './src/screens/CalendarStackScreen';
 import ProfileStackScreen from './src/screens/ProfileStackScreen';
 import { ProfileProvider } from './src/components/context/profile-context';
 
+{/* Create bottom navigation bar */}
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -18,6 +19,8 @@ export default function App() {
     <TaskProvider>
         <ProfileProvider>
             <NavigationContainer>
+
+                {/* All main Tabs */}
                 <Tab.Navigator
                 screenOptions={({ route }) => ({
                     headerShown: false,
@@ -44,6 +47,7 @@ export default function App() {
                     },
                 })}
                 >
+                    {/* Tab Screens */}
                     <Tab.Screen name="Home" component={HomeScreen} />
                     <Tab.Screen name="Calendar" component={CalendarStackScreen} />
                     <Tab.Screen name="Tasks" component={TaskScreen} />

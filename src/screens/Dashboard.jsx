@@ -1,33 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 
 export default function DashboardScreen() {
 
-    {/* Helper function */}
-    const calculateWeeklyChange = (currentWeekTotal, lastWeekTotal) => {
-        if (lastWeekTotal === 0) {
-            return currentWeekTotal > 0 ? 100 : 0;
-        }
-        const change = ((currentWeekTotal - lastWeekTotal) / lastWeekTotal) * 100;
-        return Math.round(change);
-    };
-
-    {/* Weekly data */}
-    const currentWeekTasks = 63;
-    const lastWeekTasks = 55;
-    const weeklyChange = calculateWeeklyChange(currentWeekTasks, lastWeekTasks);
-    const isIncrease = weeklyChange >= 0;
-    const averagePerDay = (currentWeekTasks / 7).toFixed(1);
-
-    {/* Completion data */}
-    const targetTasks = 100;
-    const completedTasks = 72;
-    const completionPercentage = Math.round((completedTasks / targetTasks) * 100);
-    const aboveTarget = completionPercentage >= 100;
-
-    const changeText = `${isIncrease ? '+' : ''}${weeklyChange}% from last week`;
-
-    {/* Main UI */}
     return (
         <View style={[styles.container, { paddingTop: 20 }]} contentContainerStyle={{ paddingBottom: 80 }}>
 
@@ -48,9 +23,9 @@ export default function DashboardScreen() {
                         <Text style={styles.iconLabel}>This Week</Text>
                     </View>
 
-                    <Text style={styles.weekValue}>{currentWeekTasks}</Text>
-                    <Text style={[styles.changeText, { color: isIncrease ? '#2FE942' : '#ab0a0aff' }]}>
-                        {changeText}
+                    <Text style={styles.weekValue}>63</Text>
+                    <Text style={[styles.changeText, { color: '#2FE942' }]}>
+                        +15% from last week
                     </Text>
                 </View>
 
@@ -64,9 +39,9 @@ export default function DashboardScreen() {
                         <Text style={styles.iconLabel}>Completion</Text>
                     </View>
 
-                    <Text style={styles.completionValue}>{completionPercentage}%</Text>
-                    <Text style={[styles.completionText, { color: aboveTarget ? '#2FE942' : '#2F5EE9' }]}>
-                        {aboveTarget ? 'Above target' : 'Below target'}
+                    <Text style={styles.completionValue}>72%</Text>
+                    <Text style={[styles.completionText, { color: '#2F5EE9' }]}>
+                        Above target
                     </Text>
                 </View>
             </View>
@@ -83,7 +58,7 @@ export default function DashboardScreen() {
                     </View>
 
                     <View style={styles.legendItem}>
-                        <View style={[styles.legendDot, { backgroundColor: '#ffffffff' }]} />
+                        <View style={[styles.legendDot, { backgroundColor: '#FFFFFF' }]} />
                         <Text style={styles.legendLabel}>Completed</Text>
                     </View>
                 </View>
@@ -101,12 +76,12 @@ export default function DashboardScreen() {
 
                 <View style={styles.summaryRow}>
                     <Text style={styles.summaryLabel}>Total tasks completed</Text>
-                    <Text style={styles.summaryValue}>{completedTasks}</Text>
+                    <Text style={styles.summaryValue}>72</Text>
                 </View>
 
                 <View style={styles.summaryRow}>
                     <Text style={styles.summaryLabel}>Average per day</Text>
-                    <Text style={styles.summaryValue}>{averagePerDay}</Text>
+                    <Text style={styles.summaryValue}>9.0</Text>
                 </View>
 
                 <View style={styles.summaryRow}>

@@ -3,15 +3,19 @@ import { AdvancedCheckbox } from "react-native-advanced-checkbox";
 
 export default function TaskCardComp({ taskObj, toggleCompleted }) {
     const { name, priority, completed } = taskObj;
-
+    
+    {/* Determine The Task Color Based On Priority */}
     let priorityColor;
-    if (priority.toLowerCase() === 'high') priorityColor = 'red';
-    else if (priority.toLowerCase() === 'medium') priorityColor = 'orange';
+    if (priority.toLowerCase() === 'high') 
+        priorityColor = 'red';
+    else if (priority.toLowerCase() === 'medium') 
+        priorityColor = 'orange';
     else priorityColor = '#2FE942';
-
+    
     return (
         <View style={taskStyles.container}>
             <View style={taskStyles.row}>
+                {/* Checkbox And Task Name */}
                 <AdvancedCheckbox
                     value={completed}
                     onValueChange={toggleCompleted}
@@ -19,15 +23,15 @@ export default function TaskCardComp({ taskObj, toggleCompleted }) {
                     checkedColor="#E891D6"
                     uncheckedColor="#3D2938"
                 />
-
                 <Text style={taskStyles.name}>{name}</Text>
             </View>
-
+            
+            {/* Priority Label */}
             <Text style={[
                 taskStyles.priorityCard,
                 { color: priorityColor, borderColor: priorityColor }
             ]}>
-                {priority.charAt(0).toUpperCase() + priority.slice(1)} Priority
+            {priority.charAt(0).toUpperCase() + priority.slice(1)} Priority
             </Text>
         </View>
     );

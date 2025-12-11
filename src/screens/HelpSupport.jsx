@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, TextInput, Image } from 'react-native';
 
 export default function HelpSupportScreen() {
+    {/* Store email input and message */}
     const [email, setEmail] = useState('yasmina@example.com');
     const [message, setMessage] = useState('');
 
@@ -14,20 +15,17 @@ export default function HelpSupportScreen() {
 
                 <TouchableOpacity style={styles.helpCard}>
                     <View style={styles.helpRow}>
-
-                        {/* Replaced icon with image */}
                         <View style={styles.iconContainer}>
                             <Image
                                 source={require("../assets/images/book.png")}
                                 style={{ width: 24, height: 24 }}
                             />
                         </View>
-
+                        {/* Help Content Text */}
                         <View style={styles.helpContent}>
                             <Text style={styles.helpTitle}>Getting Started</Text>
                             <Text style={styles.helpDescription}>Learn the basics of using the app</Text>
                         </View>
-
                         <Text style={styles.chevron}>›</Text>
                     </View>
                 </TouchableOpacity>
@@ -66,7 +64,7 @@ export default function HelpSupportScreen() {
                         />
                     </View>
 
-                    {/* Send Button (icon changed to image) */}
+                    {/* Send Button */}
                     <TouchableOpacity style={styles.sendButton}>
                         <Image
                             source={require("../assets/images/send.png")}

@@ -7,52 +7,58 @@ import PrivacySecurityScreen from "./PrivacySecurity";
 
 const Stack = createNativeStackNavigator();
 
+{/* Handles navigation between the Profile Screen, Security Screen, and Help Screen */}
 export default function ProfileStackScreen() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="ProfileMain"
-        component={ProfileScreen}
-        options={{ headerShown: false }}
-      />
-
-      <Stack.Screen
-        name="EditProfile"
-        component={EditProfileScreen}
-        options={{
-          headerStyle: {
-            backgroundColor: "#221520",
-          },
-          headerTintColor: "#ffffffff",
-          headerTitle: "Edit Profile",
-        }}
-      />
-
-      <Stack.Screen
-        name="Privacy"
-        component={PrivacySecurityScreen}
-        options={{
-            headerStyle: {
-            backgroundColor: "#221520",
-            },
-            headerTintColor: "#ffffffff",
-            headerTitle: "Privacy & Security",
-            headerBackTitle: "Back",
-        }}
-      />
-
-      <Stack.Screen
-        name="Help"
-        component={HelpSupportScreen}
-        options={{
-            headerStyle: {
-            backgroundColor: "#221520",
-            },
-            headerTintColor: "#ffffffff",
-            headerTitle: "Help & Support",
-            headerBackTitle: "Back",
-        }}
-      />
-    </Stack.Navigator>
-  );
+	return (
+		<Stack.Navigator>
+		
+			{/* Profile */}
+			<Stack.Screen
+				name="ProfileMain"
+				component={ProfileScreen}
+				options={{ headerShown: false }}
+			/>
+			
+			{/* Edit Profile */}
+			<Stack.Screen
+				name="EditProfile"
+				component={EditProfileScreen}
+				options={{
+					headerStyle: {
+						backgroundColor: "#221520",
+					},
+					headerTintColor: "#ffffffff",
+					headerTitle: "Edit Profile",
+				}}
+			/>
+			
+			{/* Privacy And Security */}
+			<Stack.Screen
+				name="Privacy"
+				component={PrivacySecurityScreen}
+				options={{
+					headerStyle: {
+						backgroundColor: "#221520",
+					},
+					headerTintColor: "#ffffffff",
+					headerTitle: "Privacy & Security",
+					headerBackTitle: "Back",
+				}}
+			/>
+			
+			{/* Help And Support */}
+			<Stack.Screen
+				name="Help"
+				component={HelpSupportScreen}
+				options={{
+					headerStyle: {
+						backgroundColor: "#221520",
+					},
+					headerTintColor: "#ffffffff",
+					headerTitle: "Help & Support",
+					headerBackTitle: "Back",
+				}}
+			/>
+		</Stack.Navigator>
+	);
 }

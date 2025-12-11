@@ -1,17 +1,17 @@
 [
     {
-      "name": "Team meeting",
-      "priority": "high",
-      "completed": false
+        "name": "Team meeting",
+        "priority": "high",
+        "completed": false
     },
     {
-      "name": "Do math homework",
-      "priority": "medium",
-      "completed": false
+        "name": "Do math homework",
+        "priority": "medium",
+        "completed": false
     },
     {
-      "name": "Go grocery shopping",
-      "priority": "low",
-      "completed": false
+        "name": "Go grocery shopping",
+        "priority": "low",
+        "completed": false
     }
 ]

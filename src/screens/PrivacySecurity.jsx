@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-  Image,
-  Switch,
-} from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Switch } from "react-native";
 
 export default function PrivacySecurityScreen() {
   const [locationEnabled, setLocationEnabled] = useState(true);
